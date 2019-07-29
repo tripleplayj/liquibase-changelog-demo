@@ -1,0 +1,17 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: jjakse
+      changes:
+        - createTable:
+            tableName: form_node
+            columns:
+              - column:
+                  name: id
+                  type: java.sql.types.INTEGER
+              - column:
+                  name: name
+                  type: java.sql.types.VARCHAR(255)
+              - column:
+                  name: passport_number
+                  type: java.sql.types.VARCHAR(255)
