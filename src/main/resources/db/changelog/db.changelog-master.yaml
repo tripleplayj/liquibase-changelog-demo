@@ -10,8 +10,5 @@ databaseChangeLog:
                   name: id
                   type: java.sql.types.INTEGER
               - column:
-                  name: name
-                  type: java.sql.types.VARCHAR(255)
-              - column:
-                  name: passport_number
+                  name: title
                   type: java.sql.types.VARCHAR(255)
