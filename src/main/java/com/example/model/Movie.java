@@ -1,10 +1,7 @@
 
 package com.example.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "MOVIE")
@@ -13,19 +10,25 @@ public class Movie {
     @Id
     @GeneratedValue
     private Integer id;
+
+    @Column
+    private String genre;
+
+
+    @Column
     private String title;
+
+    @Column
+    private String releaseDate;
 
     public Movie() {
     }
 
-    public Movie(Integer id, String title) {
+    public Movie(Integer id, String genre) {
         this.id = id;
-        this.title = title;
+        this.genre = genre;
     }
 
-    public Movie(String title) {
-        this.title = title;
-    }
 
     public Integer getId() {
         return id;
@@ -35,20 +38,14 @@ public class Movie {
         this.id = id;
     }
 
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
 
 
-    @Override
-    public String toString() {
-        return "Movie{" +
-                "id=" + id +
-                ", title='" + title + '\'' +
-                '}';
+    public String getGenre() {
+        return genre;
     }
+
+    public void setGenre(String genre) {
+        this.genre = genre;
+    }
+
 }
