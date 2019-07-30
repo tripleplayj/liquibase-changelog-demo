@@ -1,0 +1,8 @@
+databaseChangeLog:
+  - preconditions:
+      - and:
+          - runningAs: sa
+          - dbms: hsql
+  - include:
+    - file: 1-liquibase-diff-changeLog.xml
+

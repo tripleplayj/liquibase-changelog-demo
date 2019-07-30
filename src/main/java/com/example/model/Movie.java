@@ -1,10 +1,7 @@
 
 package com.example.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "MOVIE")
@@ -14,6 +11,9 @@ public class Movie {
     @GeneratedValue
     private Integer id;
     private String title;
+
+    @Column
+    private String genre;
 
     public Movie() {
     }
